@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary: #2A5E80;
+    --secondary: #CC7B58;
+    --secondary-dark: #804830;
+    --tertiary: #CCAB2F;
+    --tertiary-dark: #806C24;
+    --white-text: #ffffff;
+    --black-text: #181818;
+}
+
+@font-face {
+    font-family: "Fredoka One Regular";
+    src: url("assets/fonts/FredokaOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "IBM Plex Mono Regular";
+    src: url("assets/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter Variable";
+    src: url("assets/fonts/Inter-Variable.ttf") format("truetype");
+}
+
+body {
+    font-family: "Inter Variable";
+}

@@ -1,0 +1,11 @@
+div {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--primary);
+    color: var(--white-text);
+}
+
+#app-title {
+    font-family: "Fredoka One Regular", Arial, Helvetica, sans-serif;
+    padding-left: 1em;
+}
