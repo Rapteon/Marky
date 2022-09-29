@@ -8,6 +8,10 @@
     border: 1px solid lightgrey;
 }
 
+.file-selector > img {
+    height: 10vh;
+}
+
 .file-selector:hover {
     animation-name: "border-fade-in";
     animation-duration: var(--animation-duration);
