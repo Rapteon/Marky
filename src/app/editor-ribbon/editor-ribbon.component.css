@@ -1,0 +1,26 @@
+.ribbon-icon {
+    border: 1px solid lightgrey;
+    padding: 0.5vh 0.5vw;
+    height: 4vh;
+    width: auto;
+}
+
+.ribbon-icon:hover {
+    border: 1px solid var(--secondary);
+    animation-name: "border-fade-in";
+    animation-duration: var(--animation-duration);
+    animation-fill-mode: var(--animation-fill-mode);
+}
+
+.ribbon-icon:active {
+    background-color: var(--secondary);
+}
+
+.ribbon-icon-disabled {
+    border: 1px solid lightgrey;
+    padding: 0.5vh 0.5vw;
+    height: 4vh;
+    width: auto;
+    background-color: lightgrey;
+    color: white;
+}

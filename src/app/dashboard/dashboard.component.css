@@ -1,0 +1,40 @@
+.file-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+    margin: 0.5vh 0.5vw;
+    padding: 0.5vh 0.5vw;
+    border: 1px solid lightgrey;
+}
+
+.file-selector:hover {
+    animation-name: "border-fade-in";
+    animation-duration: var(--animation-duration);
+    animation-fill-mode: var(--animation-fill-mode);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#demo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 50vh;
+}
+
+#demo-content {
+    font-family: "IBM Flex Mono", 'Courier New', Courier, monospace;
+}
+#file-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

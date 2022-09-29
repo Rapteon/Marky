@@ -1,0 +1,16 @@
+<div id="container">
+    <app-editor-ribbon [selectedText]="selectedText"></app-editor-ribbon>
+    <div id="editor">
+        <form id="textarea-form">
+            <label for="markdown-input">Editor</label>
+            <textarea id="markdown-input" autocomplete="off" name="markdownInput" [placeholder]="placeholderText"
+                [(ngModel)]="inputText" (select)="setSelectedText()" (focus)="unsetSelectedText()"
+                (keyup)="unsetSelectedText()" (mousedown)="unsetSelectedText()"></textarea>
+        </form>
+        <div>
+            <label for="markdown-preview">Preview</label>
+            <div id="markdown-preview" [innerHTML]="markdownProcessorService.getHTML(inputText)">
+            </div>
+        </div>
+    </div>
+</div>

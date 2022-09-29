@@ -8,6 +8,9 @@
     --tertiary-dark: #806C24;
     --white-text: #ffffff;
     --black-text: #181818;
+
+    --animation-duration: 500ms;
+    --animation-fill-mode: forwards;
 }
 
 @font-face {
@@ -25,6 +28,23 @@
     src: url("assets/fonts/Inter-Variable.ttf") format("truetype");
 }
 
+@keyframes border-fade-in {
+    0%{
+        border: 1px solid transparent;
+    }
+    100% {
+        border: 1px solid var(--secondary);
+    }
+}
+
+.primary-text {
+    font-family: "Inter Variable";
+    color: var(--primary);
+}
 body {
     font-family: "Inter Variable";
+}
+
+label {
+    color: var(--primary);
 }

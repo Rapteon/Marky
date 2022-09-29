@@ -1,0 +1,23 @@
+<div style="display: flex; flex-direction: column;">
+    <div>
+        <img class="ribbon-icon" src="assets/images/basic_floppydisk.svg" alt="Save file" (click)="saveFile()">
+        <img class="ribbon-icon" src="assets/images/basic_link.svg" alt="Insert link" (click)="insertLink()">
+        <img class="ribbon-icon" src="assets/images/basic_picture.svg" alt="Insert image" (click)="insertImage()">
+        <img class="ribbon-icon" src="assets/images/bold.svg" alt="Bold text" (click)="makeTextBold()">
+        <img class="ribbon-icon" src="assets/images/italic.svg" alt="Italic text" (click)="makeTextItalic()">
+        <img class="ribbon-icon" src="assets/images/strikethrough.svg" alt="Strikethrough text" (click)="makeTextStrikethrough()">
+        <img id="ribbon-heading-selector"
+            [ngClass]="{'ribbon-icon': !viewingHeadingOptions, 'ribbon-icon-disabled': viewingHeadingOptions}"
+            class="ribbon-icon" src="assets/images/heading.svg" alt="Select heading"
+            [attr.aria-disabled]="!viewingHeadingOptions" (click)="toggleHeadingOptions()">
+        <ng-container *ngIf="viewingHeadingOptions">
+            <img class="ribbon-icon" src="assets/images/heading_1.svg" (click)="addHeading('h1')">
+            <img class="ribbon-icon" src="assets/images/heading_2.svg" (click)="addHeading('h2')">
+            <img class="ribbon-icon" src="assets/images/heading_3.svg" (click)="addHeading('h3')">
+            <img class="ribbon-icon" src="assets/images/heading_4.svg" (click)="addHeading('h4')">
+            <img class="ribbon-icon" src="assets/images/heading_5.svg" (click)="addHeading('h5')">
+            <img class="ribbon-icon" src="assets/images/heading_6.svg" (click)="addHeading('h6')">
+        </ng-container>
+        <img class="ribbon-icon" src="assets/images/blockquote.svg" alt="Quote text" (click)="addBlockQuote()">
+    </div>
+</div>
