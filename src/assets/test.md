@@ -36,7 +36,7 @@ Now how about some *italics*?
 
 This is also in _italics_.
 
-Also strikethrough_?
+Also ~strikethrough~?
 
 
 Quote me on this:
