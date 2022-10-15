@@ -5,7 +5,7 @@
             <label for="markdown-input">Editor</label>
             <textarea id="markdown-input" autocomplete="off" name="markdownInput" [placeholder]="placeholderText"
                 [(ngModel)]="inputText" (select)="setSelectedText()" (focus)="unsetSelectedText()"
-                (keyup)="unsetSelectedText()" (mousedown)="unsetSelectedText()"></textarea>
+                (keydown)="unsetSelectedText()" (mousedown)="unsetSelectedText()"></textarea>
         </form>
         <div>
             <label for="markdown-preview">Preview</label>

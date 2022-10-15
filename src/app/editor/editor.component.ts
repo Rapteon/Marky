@@ -25,7 +25,6 @@ export class EditorComponent implements OnInit {
   ngOnInit(): void {
     this.inputTextArea = document.getElementById("markdown-input") as HTMLTextAreaElement;
     this.markdownGeneratorService.markdownSubject.subscribe((markdownText) => {
-      console.log("Changed");
       this.insertMarkdown(markdownText);
     });
   }
@@ -38,7 +37,6 @@ export class EditorComponent implements OnInit {
   unsetSelectedText(): void {
     // If selectedText is not empty string, then unset.
     if (this.selectedText !== '') {
-      console.log('Unsetting');
       this.selectedText = '';
     }
   }
@@ -47,17 +45,8 @@ export class EditorComponent implements OnInit {
     let selectionStart: number = this.inputTextArea.selectionStart;
     let selectionEnd: number = this.inputTextArea.selectionEnd;
 
-    let inputTextBeforeSelection = this.inputTextArea.value.substring(0, selectionStart);
-    let inputTextAfterSelection = this.inputTextArea.value.substring(selectionEnd);
-
-    // Add whitespace only if text before selection doesn't end with space and is not empty.
-    if (inputTextBeforeSelection.length === 0)
-      markdownText = markdownText.padStart(markdownText.length + 1, ' ');
-
-    if (inputTextAfterSelection.length === 0)
-      markdownText = markdownText.padEnd(markdownText.length + 1, ' ');
-
-    this.inputTextArea.value = this.inputText.substring(0, selectionStart) + markdownText + this.inputText.substring(selectionEnd);
+    this.inputTextArea.setRangeText(markdownText, selectionStart, selectionEnd);
+    this.inputText = this.inputTextArea.value;
     this.inputTextArea.focus();
   }
 }

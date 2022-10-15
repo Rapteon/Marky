@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
-import { Observable } from 'rxjs';
 import { MarkdownGeneratorService } from '../markdown-generator.service';
 
 @Component({
