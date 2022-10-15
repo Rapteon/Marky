@@ -19,7 +19,7 @@ export class MarkdownGeneratorService {
         if (text === '')
           this.markdownText = `[text](url)`
         else
-          this.markdownText = `[text](${text})`;
+          this.markdownText = `[${text}](${text})`;
         break;
       case 'image':
         if (text === '')
