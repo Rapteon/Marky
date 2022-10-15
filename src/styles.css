@@ -30,7 +30,7 @@
 
 @keyframes border-fade-in {
     0%{
-        border: 1px solid transparent;
+        border: 1px solid lightgrey;
     }
     100% {
         border: 1px solid var(--secondary);
