@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { FileProcessorService } from '../file-processor.service';
 import { MarkdownGeneratorService } from '../markdown-generator.service';
 import { MarkdownProcessorService } from '../markdown-processor.service';
 
@@ -15,7 +17,8 @@ export class EditorComponent implements OnInit {
 
   constructor(
     public markdownProcessorService: MarkdownProcessorService,
-    private markdownGeneratorService: MarkdownGeneratorService
+    private markdownGeneratorService: MarkdownGeneratorService,
+    private fileProcessorService: FileProcessorService
   ) {
     this.inputText = '';
     this.selectedText = '';
@@ -26,6 +29,10 @@ export class EditorComponent implements OnInit {
     this.inputTextArea = document.getElementById("markdown-input") as HTMLTextAreaElement;
     this.markdownGeneratorService.markdownSubject.subscribe((markdownText) => {
       this.insertMarkdown(markdownText);
+    });
+    this.fileProcessorService.fileMapSubject.subscribe(fileMap => {
+      this.inputText = fileMap.content !== undefined ? fileMap.content : '';
+      console.log(fileMap.content);
     });
   }
 
