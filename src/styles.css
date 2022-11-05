@@ -29,22 +29,24 @@
 }
 
 @keyframes border-fade-in {
-    0%{
+    0% {
         border: 1px solid lightgrey;
     }
+
     100% {
         border: 1px solid var(--secondary);
     }
 }
 
-.primary-text {
-    font-family: "Inter Variable";
-    color: var(--primary);
-}
 body {
     font-family: "Inter Variable";
 }
 
 label {
+    color: var(--primary);
+}
+
+.primary-text {
+    font-family: "Inter Variable";
     color: var(--primary);
 }
