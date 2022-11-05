@@ -11,12 +11,12 @@ you need.
         </div>
     </div>
     <div id="file-selector">
-        <div id="create-new" class="file-selector" (click)="createFile()">
+        <div id="create-new" class="file-selector" (mousedown)="createFile()">
             <img src="assets/images/basic_upload.svg">
             <p class="primary-text">Create new file</p>
             <input id="file-input" type="file" style="display: none" accept=".md">
         </div>
-        <div id="load-existing" class="file-selector" (click)="loadFile()">
+        <div id="load-existing" class="file-selector" (mousedown)="loadFile()">
             <img src="assets/images/arrows_circle_plus.svg">
             <p class="primary-text">Open existing file</p>
         </div>

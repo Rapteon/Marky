@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit {
     this.fileInput.addEventListener('change', () => {
       let files: FileList = this.fileInput.files!;
       this.fileProcessor.storeFile(files.item(0)!);
+      this.router.navigate(['editor']);
     })
   }
 
