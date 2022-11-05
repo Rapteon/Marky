@@ -24,7 +24,12 @@ export class FileProcessorService {
       this.fileMap.name = file.name;
       this.fileMap.content = this.reader.result as string;
       this.fileMapSubject.next(this.fileMap);
-      console.log('Sent file');
     }
+  }
+
+  createNewFile(): void {
+    this.fileMap.name = 'untitled.md';
+    this.fileMap.content = '';
+    this.fileMapSubject.next(this.fileMap);
   }
 }

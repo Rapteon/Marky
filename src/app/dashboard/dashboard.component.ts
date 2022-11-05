@@ -33,6 +33,7 @@ export class DashboardComponent implements OnInit {
   }
 
   createFile(): void {
+    this.fileProcessor.createNewFile();
     this.router.navigate(['editor']);
   }
 }
